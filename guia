@@ -165,3 +165,43 @@ for(f=0;f<fila;f++){
 return numero;
 
 }
+// 7 Hacer una función que cargue un arreglo de palabras (strings). La función debe retornar cuantas palabras se cargaron.
+//(puede ser a través del parámetro como puntero).
+
+int cargarPalabras (char nombres [100][100]){
+
+
+char continuar;
+int contador = 0;
+
+do{
+    printf("ingrese un nombre\n");
+    fflush(stdin);
+    scanf("%s", nombres[contador]);
+
+
+    contador ++;
+
+    printf("desea ingresar mas numeros? 's'/'n'\n");
+    fflush(stdin);
+    scanf("%c", &continuar);
+
+}while(continuar == 's');
+return contador;
+}
+
+//8 Hacer una función que muestre un arreglo de palabras.
+
+void mostrarNombres (char nombres [100][100], int nombre){
+
+int f =0;
+
+for(f=0; f<nombre; f++){
+    printf("%s", nombres[f]);
+    printf("\n");
+}
+
+}
+
+
+
